@@ -1,0 +1,71 @@
+svg path,
+svg circle,
+svg polygon,
+svg polyline,
+svg line,
+svg rect {
+  stroke: var(--grey-light) !important;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+.no-select {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.pd-20 {
+  padding: 20px;
+}
+
+.contents {
+  width: 100%;
+  position: relative;
+  margin: 70px 0 70px;
+}
+
+.content-bloc {
+  width: 100%;
+  position: relative;
+}
+
+/* Transaction */
+
+.header-transac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px 20px;
+}
+
+.header-transac a {
+  display: inline-block;
+  padding: 20px 15px;
+  border-radius: 20px;
+  color: var(--white);
+  line-height: 0px;
+}
+
+.header-transac a.active {
+  background: #444;
+}
+
+@media screen and (max-width: 320px) {
+  .header-transac a {
+    font-size: 15px;
+  }
+}

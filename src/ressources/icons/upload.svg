@@ -1,0 +1,12 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+	<g fill="none" fill-rule="evenodd" transform="translate(0 4)">
+		<path stroke="currentColor" stroke-width="1.5" d="M38.328 31.434c.658 0 1.262-.348 1.596-.923a1.818 1.818 0 0 0 .061-1.761L29.211 7.784a1.84 1.84 0 0 0-1.473-1.025c-.635-.062-1.258.212-1.607.669l-7.255 11.529-.662-.779-4.814-5.663a1.836 1.836 0 0 0-1.543-.585c-.58.06-1.096.39-1.394.892L.995 28.696a1.815 1.815 0 0 0 .003 1.825c.326.565.932.913 1.588.913h35.742z">
+		</path>
+		<circle cx="5.5" cy="3.5" r="2.75" stroke="currentColor" stroke-width="1.5">
+		</circle>
+		<path fill="#FFF" fill-rule="nonzero" stroke="currentColor" stroke-width="1.5" d="M36.5 17.75c-5.936 0-10.75 4.814-10.75 10.75s4.814 10.75 10.75 10.75 10.75-4.814 10.75-10.75-4.814-10.75-10.75-10.75z">
+		</path>
+		<path fill="currentColor" d="M37 28h4.5a.5.5 0 1 1 0 1H37v4.5a.5.5 0 1 1-1 0V29h-4.5a.5.5 0 1 1 0-1H36v-4.5a.5.5 0 1 1 1 0V28z">
+		</path>
+	</g>
+</svg>

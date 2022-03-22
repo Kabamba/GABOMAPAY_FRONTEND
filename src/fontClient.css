@@ -1,0 +1,29 @@
+@font-face{
+    font-family:"FiraCode";
+    src: url('./ressources/fonts/FiraCodeiScript-master/FiraCodeiScript-Italic.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"FiraCode-Medium";
+    src: url('./ressources/fonts/FiraCodeiScript-master/FiraCodeiScript-Regular.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Poppins-Regular";
+    src:url('./ressources/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Poppins-Light";
+    src:url('./ressources/fonts/poppins/Poppins-Light.ttf') format('truetype');
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Poppins-Medium";
+    src:url('./ressources/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-display:swap;
+}

@@ -1,0 +1,133 @@
+/* Statitisque */
+.statitisque {
+  width: 100%;
+  position: relative;
+}
+
+.statitisque .statis-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.statitisque .statis-flex .statis-bloc {
+  width: calc(calc(100% / 4) - 20px);
+  background: var(--white);
+  padding: 20px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.statitisque .statis-flex .statis-bloc .statis-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.statitisque .statis-flex .statis-bloc .statis-title .icon {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.statitisque .statis-flex .statis-bloc .statis-title svg {
+  width: 50px;
+  height: 50px;
+}
+
+.statitisque .statis-flex .statis-bloc .title {
+  color: #a39f9f;
+  font-size: 15px;
+  white-space: pre-line;
+}
+
+.statitisque .statis-flex h3 {
+  font-family: "GoogleSans-Medium";
+  font-size: 24px;
+}
+
+.chart {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.chart-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.chart .chart-flex .chart-box {
+  width: 100%;
+  background: var(--white);
+  border-radius: 10px;
+  padding:20px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chart .chart-flex .chart-box #myChart {
+  width: 100%;
+  height: 500px;
+}
+
+/* statitisque */
+
+/*----------  Mobile  ----------*/
+
+@media screen and (min-width: 300px) and (max-width: 630px) {
+  /* Statitisque */
+  .statitisque .statis-flex .statis-bloc {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  .chart .chart-flex .chart-box #myChart {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/*----------  Mobile  ----------*/
+
+/*----------  Mini Tablette  ----------*/
+
+@media screen and (min-width: 650px) and (max-width: 920px) {
+  /* Statitisque */
+  .statitisque .statis-flex .statis-bloc {
+    width: calc(calc(100% / 3) - 20px);
+  }
+
+  .tableau {
+    overflow: hidden;
+  }
+
+  .table {
+    max-width: 708px;
+    overflow-x: auto;
+  }
+}
+
+/*----------  Mini Tablette  ----------*/
+
+
+/*----------  Tablette  ----------*/
+
+@media screen and (min-width: 920px) and (max-width: 1190px) {
+  /* Statitisque */
+  .statitisque .statis-flex .statis-bloc {
+    width: calc(calc(100% / 3) - 20px);
+  }
+
+  .chart .chart-flex .chart-box #myChart {
+    width: 100%;
+    height: 300px;
+  }
+}
+

@@ -1,0 +1,304 @@
+:root {
+  --grey-base: #f5f5fd;
+  --grey-secondary: #ececf6;
+  --grey-deep: #475d5b;
+  --black-primary: #14121f;
+  --white: #fff;
+  --shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+
+  --black-base: #080B0A;
+  --orange-base: #BE3726;
+  --teal-light: #5B9A93;
+  --teal-deep: #2E645F;
+  --grey-light: #8A9E97;
+  --grey-deep: #40534D;
+  --grey-input: #A2A0A0;
+  --grey-input-fill: #7b78785e;
+  --white: #fff;
+}
+
+@font-face{
+  font-family:'GoogleSans-Regular';
+  src: url('./ressources/fonts/GoogleSans-Regular.ttf') format('truetype');;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'GoogleSans-Medium';
+  src:url('./ressources/fonts/google-sans-cufonfonts/ProductSans-Medium.ttf') format('truetype');
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'GoogleSans-Light';
+  src:url('./ressources/fonts/google-sans-cufonfonts/ProductSans-Light.ttf') format('truetype');
+}
+
+@font-face{
+  font-family:'FiraCode';
+  src:url('./ressources/fonts/FiraCodeiScript-master/FiraCodeiScript-Italic.ttf') format("truetype");
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"FiraCode-Medium";
+  src: url('./ressources/fonts/FiraCodeiScript-master/FiraCodeiScript-Regular.ttf') format('truetype');
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Poppins-Regular";
+  src:url('./ressources/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Poppins-Light";
+  src:url('./ressources/fonts/poppins/Poppins-Light.ttf') format('truetype');
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Poppins-Medium";
+  src:url('./ressources/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+  font-display:swap;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "GoogleSans-Regular";
+  font-size: 1rem;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  color: var(--black-primary);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3 ease 0s;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+  line-height: 0;
+  display: block;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+select,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[hidden] {
+  display: none;
+}
+
+/*----------  Default property  ----------*/
+
+svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--black-primary);
+}
+
+.success {
+  background: #3ab30a !important;
+  color: var(--white) !important;
+}
+
+.danger {
+  background: #dc3545 !important;
+  color: var(--white) !important;
+}
+
+.pd-10 {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
+.btn-add button,
+.btn-add a {
+  border: none;
+  outline: none;
+  line-height: 0px;
+  display: inline-block;
+  padding: 20px 20px;
+  cursor: pointer;
+  background: var(--black-primary);
+  color: var(--white);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+
+.pagination {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 40px;
+}
+
+.pagination-content {
+  display: flex;
+  align-items: center;
+}
+
+.pagination button,
+.pagination-content a {
+  border: none;
+  outline: none;
+  border: 1px solid #b6bac7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  line-height: 0px;
+  background: var(--white);
+  border-radius: 4px;
+  color: var(--black-primary);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.pagination button:not(:first-child),
+.pagination-content a:not(:first-child) {
+  margin-left: 10px;
+}
+
+.pagination svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pagination .dotted {
+  font-family: "GoogleSans-Medium";
+  font-size: 25px;
+  line-height: 16px;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.pagination button:first-child,
+.pagination button:last-child,
+.pagination-content a:first-child,
+.pagination-content a:last-child {
+  border: none;
+  background: transparent;
+  font-family: "GoogleSans-Medium";
+  font-size: 16px;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.pagination .active,
+.pagination button,
+.pagination-content a:hover {
+  background: var(--black-primary);
+  color: #fff;
+  border-color: var(--black-primary);
+}
+
+.pagination button:first-child:hover,
+.pagination button:last-child:hover,
+.pagination-content a:first-child:hover,
+.pagination-content a:last-child:hover {
+  background: transparent;
+}
+
+
+.check-container {
+  position: relative;
+  display: block;
+}
+
+.check-box {
+  display: block;
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--grey-secondary);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease;
+}
+
+.check-box .check-bubble {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease;
+  transform: translateX(0px);
+}
+
+.check-container #input-check:checked ~ .check-box {
+  background: royalblue;
+}
+
+.check-container #input-check:checked ~ .check-box .check-bubble {
+  transform: translateX(18px);
+}
+
+
+/*----------  Default property  ----------*/

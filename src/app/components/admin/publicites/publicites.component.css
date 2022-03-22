@@ -1,0 +1,15 @@
+
+.error-box {
+    background: #bd2c3b;
+    padding:10px 20px;
+    margin: 0px 0 10px;
+}
+
+.error-box p{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.error-box p:last-child{
+    margin-bottom:0px;
+}

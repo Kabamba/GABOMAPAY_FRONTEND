@@ -1,0 +1,177 @@
+<div class="wrapper-site">
+    <app-site-nav></app-site-nav>
+    <!-- contents -->
+    <div class="contents-site">
+        <div class="content-bloc">
+            <div class="detail-transac">
+                <div class="detail-transac-title">
+                    <h2>Détails du transfert</h2>
+                </div>
+
+                <div class="detail-content" *ngIf="details">
+                    <div class="d-title">
+                        <h3>Informations du transfert</h3>
+                    </div>
+
+                    <div class="d-bloc" *ngIf="!ShowSkeleton">
+                        <p><strong>Montant &nbsp; : &nbsp;</strong> {{details.montant}} {{ details.country.id == 50 ? 'USD'
+                            : 'FCFA' }}</p>
+                        <p><strong>Type de transaction &nbsp; : &nbsp; </strong>{{details.type_trans_name}}
+                            <span *ngIf="details.type_trans == 3 && details.user.id == user.id">sortant</span>
+                            <span *ngIf="details.type_trans == 3 && details.second_id == user.id">reçu</span>
+                        </p>
+                        <p><strong>Date &nbsp; : &nbsp; </strong>{{details.date_trans}}</p>
+                        <p><strong>Réference &nbsp; : &nbsp; </strong>{{details.reference}}</p>
+                        <p *ngIf="details.status == 0"><strong>Statut &nbsp; : &nbsp;</strong><span
+                                class="statut cours">En cours</span>
+                        </p>
+                        <p *ngIf="details.status == 1"><strong>Statut &nbsp; : &nbsp;</strong> <span
+                                class="statut success">Succés</span>
+                        </p>
+                        <p *ngIf="details.status == 2"><strong>Statut &nbsp; : &nbsp;</strong> <span
+                                class="statut danger">Echec</span>
+                        </p>
+                    </div>
+                
+                    <!-- Information expéditeur -->
+                    <!-- Information expéditeur -->
+
+                    <div class="d-title">
+                        <h3>Informations de l'expéditeur</h3>
+                    </div>
+
+                    <div class="d-bloc" *ngIf="!ShowSkeleton">
+                        <p><strong>Noms de l'expéditeur &nbsp; : &nbsp; </strong>{{details.user.prenom}}
+                            {{details.user.name}}</p>
+                        <p><strong>Email &nbsp; : &nbsp; </strong>{{details.user.email}}</p>
+                        <p><strong>Téléphone &nbsp; : &nbsp; </strong>{{details.user.phone}}</p>
+                        <p><strong>Pays &nbsp; : &nbsp; </strong>{{details.country.name}}</p>
+                    </div>
+                    <!-- Information expéditeur -->
+                    <!-- Information expéditeur -->
+
+
+
+                    <!-- Information recepteur -->
+                    <!-- Information recepteur -->
+
+                    <div class="d-title"
+                        *ngIf="details.type_trans == 3 || details.type_trans == 5 || details.type_trans == 6 || details.type_trans == 8">
+                        <h3>Informations du récépteur</h3>
+                    </div>
+
+                    <div class="d-bloc" *ngIf="!ShowSkeleton">
+
+                        <div *ngIf="details.type_trans == 3">
+                            <p><strong>Noms du récépteur : </strong>{{details.more.name}} {{details.more.prenom}}</p>
+                            <p><strong>Email : </strong>{{details.more.email}}</p>
+                            <p><strong>Téléphone : </strong>{{details.more.phone}}</p>
+                            <p><strong>Pays : </strong>{{details.more.country}}</p>
+                        </div>
+
+                        <div *ngIf="details.type_trans == 5">
+                            <p><strong>Noms du récépteur : </strong>{{details.recever.name}} {{details.recever.prenom}}
+                            </p>
+                            <p><strong>Email : </strong>{{details.recever.email}}</p>
+                            <p><strong>Téléphone : </strong>{{details.recever.phone}}</p>
+                            <p><strong>Pays : </strong>{{details.recever.country}}</p>
+                        </div>
+
+                        <div *ngIf="details.type_trans == 6">
+                            <p><strong>Noms du récépteur : </strong>{{details.recever.name}} {{details.recever.prenom}}
+                            </p>
+                            <p><strong>Email : </strong>{{details.recever.email}}</p>
+                            <p><strong>Téléphone : </strong>{{details.recever.phone}}</p>
+                            <p><strong>Pays : </strong>{{details.recever.country}}</p>
+                        </div>
+                    </div>
+                    <!-- Information recepteur -->
+                    <!-- Information recepteur -->
+
+
+                    <!-- Information toutes information -->
+                    <!-- Information toutes information -->
+
+                    <div *ngIf="details.type_trans == 6">
+                        <div class="d-title">
+                            <h3>Autres informations</h3>
+                        </div>
+
+                        <div class="d-bloc" *ngIf="!ShowSkeleton">
+                            <div *ngIf="details.type_trans == 1">
+                                <p><strong>Billing ID &nbsp; : &nbsp;</strong>{{details.more.billing_id}}</p>
+                                <p><strong>Systémé de paiement &nbsp; : &nbsp;</strong>{{details.more.paymentsystem}}
+                                </p>
+                            </div>
+
+                            <div *ngIf="details.type_trans == 2">
+                                <p><strong>Montant total &nbsp; : &nbsp;</strong>{{details.more.montant_total}}$</p>
+                                <p><strong>Total frais &nbsp;: &nbsp;</strong>{{details.more.montant_frais}}$</p>
+                                <p><strong>Frais opérateur &nbsp; : &nbsp;</strong>{{details.more.pourcentage}}%</p>
+                                <p><strong>Opérateur mobile &nbsp; : &nbsp;</strong>{{details.operator}}</p>
+                                <p *ngIf="details.capture"><strong>Capture transaction &nbsp; : &nbsp;</strong></p>
+                                <div *ngIf="details.capture" class="capture-ref">
+                                    <img src="{{urlImage}}/transactions/{{details.capture}}" alt="{{details.capture}}">
+                                </div>
+                            </div>
+
+                            <div *ngIf="details.type_trans == 4">
+                                <p><strong>Opérateur mobile &nbsp; : &nbsp;</strong>{{details.operator_name}}</p>
+                                <p><strong>Numéro du récépteur &nbsp; : &nbsp;</strong>{{details.more.recever_number}}
+                                </p>
+                                <p><strong>Montant total &nbsp; : &nbsp;</strong>{{details.more.montant_total}} $</p>
+                                <p><strong>Frais de l'opérateur &nbsp;: &nbsp;</strong>{{details.more.pourcentage}}%</p>
+                            </div>
+
+                            <div *ngIf="details.type_trans == 5">
+                                <p><strong>Montant avec frais : </strong>{{details.more.montant_total}} $</p>
+                                <p><strong>Montant convertit : </strong>{{details.more.montant_convertit}} fcfa</p>
+                                <p><strong>Taux de conversion : </strong>{{details.more.taux_convers}} fcfa</p>
+                                <p><strong>Frais international : </strong>{{details.more.pourcentage_int}}%</p>
+                            </div>
+
+                            <div *ngIf="details.type_trans == 7">
+                                <p><strong>Opérateur mobile : </strong>{{details.operator_name}}</p>
+                                <p><strong>Montant avec frais : </strong>{{details.more.montant_total}} fcfa</p>
+                                <p><strong>Montant convertit : </strong>{{details.more.montant_convertit}} $</p>
+                                <p><strong>Taux de conversion : </strong>{{details.more.taux_convers}}</p>
+                                <p><strong>Frais international: </strong>{{details.more.pourcentage_int}}%</p>
+                                <p><strong>Frais opérateur: </strong>{{details.more.pourcentage_operator}}%</p>
+                                <p><strong>Numéro du récépteur : </strong>{{details.more.recever_number}}</p>
+                            </div>
+
+                       
+                        </div>
+                    </div>
+                    <!-- Information toutes information -->
+                    <!-- Information toutes information -->
+                </div>
+
+                <div class="detail-skel" [class.show]="ShowSkeleton">
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                </div>
+
+                <div class="detail-skel" [class.show]="ShowSkeleton">
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                </div>
+
+                <div class="detail-skel" [class.show]="ShowSkeleton">
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                    <div class="skel-para skel-background"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contents -->
+</div>

@@ -1,0 +1,39 @@
+@media screen and (max-width:1030px){
+    .unavailable{
+        display:none;
+    }
+}
+
+@media screen and (min-width:1030px){
+    .unavailable{
+        position:fixed;
+        top: 0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:var(--black-base);
+        z-index:3000;
+        color:var(--white);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+    }
+    
+    .icon-dispo{
+        margin-bottom:30px;
+    }
+    
+    .unavailable p{
+        font-size:20px;
+        margin-top:20px;
+        color:var(--orange-base);
+    }
+    
+    svg{
+        width:  100% !important;
+        height: 100% !important;
+    }
+    
+}

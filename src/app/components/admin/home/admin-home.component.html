@@ -1,0 +1,214 @@
+<div class="wrapper">
+    <app-admin-nav  [addActive]="addActive"></app-admin-nav>
+    <!-- Container Contents -->
+    <div class="container-contents">
+
+        <!-- Header-responisive -->
+        <!-- Header-responisive -->
+
+        <div class="header-responsive">
+            <div class="logo-responsive">
+                <h2>GabomaPay</h2>
+            </div>
+
+            <div class="toggle-responsive" id="toggle" (click)="toggle($event)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Header-responisive -->
+        <!-- Header-responisive -->
+
+        <div class="content-blocs respon-blocs">
+            <!-- Header -->
+            <div class="header pd-10">
+                <div class="title">
+                    <h3>Dashboard</h3>
+                    <p>Bienvenue dans votre espace d'administration !</p>
+                </div>
+
+                <div class="search">
+                    <div class="group-form">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <line x1="338.29" y1="338.29" x2="448" y2="448"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <input type="text" placeholder="Rechercher">
+                    </div>
+                </div>
+            </div>
+            <!-- Header -->
+
+            <!-- Statistique -->
+            <div class="statitisque">
+                <div class="statis-flex">
+                    <div class="statis-bloc">
+                        <div class="statis-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                    <title>ionicons-v5-d</title>
+                                    <rect x="48" y="96" width="416" height="320" rx="56" ry="56"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <line x1="48" y1="192" x2="464" y2="192"
+                                        style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:60px" />
+                                    <rect x="128" y="300" width="48" height="20"
+                                        style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:60px" />
+                                </svg>
+                            </span>
+                            <span class="title">Total des envoies</span>
+                        </div>
+
+                        <div class="statis-body">
+                            <h3>{{envoieNombre}}</h3>
+                        </div>
+                    </div>
+
+                    <div class="statis-bloc">
+                        <div class="statis-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                    <title>ionicons-v5-k</title>
+                                    <rect x="128" y="16" width="256" height="480" rx="48" ry="48"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <path
+                                        d="M176,16h24a8,8,0,0,1,8,8h0a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16h0a8,8,0,0,1,8-8h24"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                </svg>
+                            </span>
+                            <span class="title">Total des dépôts</span>
+                        </div>
+
+                        <div class="statis-body">
+                            <h3>{{depotNombre}}</h3>
+                        </div>
+                    </div>
+
+                    <div class="statis-bloc">
+                        <div class="statis-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                    <title>ionicons-v5-b</title>
+                                    <polyline points="304 48 416 160 304 272"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <line x1="398.87" y1="160" x2="96" y2="160"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <polyline points="208 464 96 352 208 240"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <line x1="114" y1="352" x2="416" y2="352"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                </svg>
+                            </span>
+                            <span class="title">Total des transactions effectuées</span>
+                        </div>
+
+                        <div class="statis-body">
+                            <h3>{{transacNombre}}</h3>
+                        </div>
+                    </div>
+
+                    <div class="statis-bloc">
+                        <div class="statis-title">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                    <title>ionicons-v5-j</title>
+                                    <path
+                                        d="M402,168c-2.93,40.67-33.1,72-66,72s-63.12-31.32-66-72c-3-42.31,26.37-72,66-72S405,126.46,402,168Z"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <path
+                                        d="M336,304c-65.17,0-127.84,32.37-143.54,95.41-2.08,8.34,3.15,16.59,11.72,16.59H467.83c8.57,0,13.77-8.25,11.72-16.59C463.85,335.36,401.18,304,336,304Z"
+                                        style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                    <path
+                                        d="M200,185.94C197.66,218.42,173.28,244,147,244S96.3,218.43,94,185.94C91.61,152.15,115.34,128,147,128S202.39,152.77,200,185.94Z"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    <path
+                                        d="M206,306c-18.05-8.27-37.93-11.45-59-11.45-52,0-102.1,25.85-114.65,76.2C30.7,377.41,34.88,384,41.72,384H154"
+                                        style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
+                                </svg>
+                            </span>
+                            <span class="title">Total des utilisateurs</span>
+                        </div>
+
+                        <div class="statis-body">
+                            <h3>{{userNombre}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="chart pd-10">
+                <div class="chart-title">
+                    <h3 class="title-3">Les transferts par mois</h3>
+                    <p class="little-text">Cette année en cours</p>
+                </div>
+                <div class="chart-flex">
+                    <div class="chart-box">
+                        <canvas id="myChart" #mychart></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Statistique -->
+
+
+            <!-- Tableau -->
+            <div class="tableau pd-10">
+                <div class="tableau-header">
+                    <div class="t-title">
+                        <h3 class="title-3">Les transactions</h3>
+                    </div>
+                </div>
+
+                <div class="loader-tab" [class.active]="isLoading">
+                    <div class="lds-roller">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="table">
+                    <table class="wd-1000">
+                        <thead>
+                            <th (click)="sort('id')">#ID <span class="icon-sort"></span></th>
+                            <th (click)="sort('name')">Utilisateur <span class="icon-sort"></span></th>
+                            <th (click)="sort('montant')">Montant <span class="icon-sort"></span></th>
+                            <th (click)="sort('date_trans')">Date <span class="icon-sort"></span></th>
+                            <th (click)="sort('pays')">Pays <span class="icon-sort"></span></th>
+                            <th>Statut</th>
+                        </thead>
+                        <tbody>
+                            <tr
+                                *ngFor="let transaction of transactions | orderBy: key : reverse | paginate : {itemsPerPage:6,currentPage:p}">
+                                <td>{{ transaction.id }}</td>
+                                <td> {{ transaction.user.name }} {{ transaction.user.prenom }} </td>
+                                <td> {{ transaction.montant }} {{ transaction.country.id == 1 ? 'FCFA' : '$' }}</td>
+                                <td> {{ transaction.date_trans }} </td>
+                                <td> {{ transaction.country.libelle }} </td>
+                                <td *ngIf="transaction.status == 0"><span class="badge cours">En cours</span></td>
+                                <td *ngIf="transaction.status == 1"><span class="badge success">Succés</span></td>
+                                <td *ngIf="transaction.status == 2"><span class="badge danger">Echec</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <pagination-controls (pageChange)=" p = $event"></pagination-controls>
+                </div>
+            </div>
+            <!-- Tableau -->
+        </div>
+    </div>
+    <!-- Container Contents -->
+</div>

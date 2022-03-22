@@ -1,0 +1,242 @@
+
+@media screen and (min-width: 300px) and (max-width: 995px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  /*----------  Header Responsive  ----------*/
+  .header-responsive {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+  }
+
+  .header-responsive .logo-responsive h2 {
+    font-family: "FiraCode";
+  }
+
+  .header-responsive .toggle-responsive{
+    cursor: pointer;
+  }
+
+  .header-responsive .toggle-responsive span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: var(--black-primary);
+    margin-bottom: 5px;
+    border-radius: 6px;
+  }
+  .header-responsive .toggle-responsive span:first-child {
+    width: 30px;
+  }
+  .header-responsive .toggle-responsive span:last-child {
+    margin-bottom: 0;
+    width: 20px;
+  }
+
+  /*----------  Header Responsive  ----------*/
+
+  .container-contents {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .respon-blocs {
+    margin-top: 68px;
+    padding-top:60px;
+  }
+
+}
+
+
+/*----------  Mobile  ----------*/
+
+@media screen and (min-width: 300px) and (max-width: 630px) {
+  .pd-10 {
+    padding: 0px !important;
+  }
+
+  .content-blocs {
+    padding:50px 20px;
+  }
+
+  .header-responsive {
+    padding: 20px;
+  }
+
+  .container-contents .header {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .container-contents .header .title {
+    width: 100%;
+  }
+
+  .container-contents .header .search {
+    width: 100%;
+  }
+
+  .container-contents .header .group-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Tableaux */
+
+  .tableau .tableau-header {
+    flex-wrap: wrap;
+  }
+
+  .tableau .table {
+    overflow-x: auto;
+  }
+
+  .tableau table.wd-500{
+    width:500px;
+  }
+
+  .tableau table.wd-600{
+    width:600px;
+  }
+
+  .tableau table.wd-700{
+    width:700px;
+  }
+
+  .tableau table.wd-800{
+    width:800px;
+  }
+
+  .tableau table.wd-900{
+    width:900px;
+  }
+
+  .tableau table.wd-1000{
+    width:1000px;
+  }
+
+  .tableau table.wd-1200{
+    width:1200px;
+  }
+
+  .tableau table.wd-1300{
+    width:1300px;
+  }
+
+  .search-two{
+    flex-wrap:wrap;
+  }
+
+  .search-two div{
+    width:100%;
+  }
+
+  .search-two div:not(:last-child){
+    margin-bottom:20px;
+  }
+
+  .search-two button{
+    margin-left:0px;
+  }
+
+  .loader-tab{
+    height:400px;
+  }
+  .pagination {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+}
+
+
+/*----------  Mini tablette  ----------*/
+/*----------  Mini tablette  ----------*/
+
+@media screen and (min-width:700px) and (max-width:900px){
+  .tableau table.wd-600{
+    width:600px;
+  }
+
+  .tableau table.wd-700{
+    width:700px;
+  }
+
+  .tableau table.wd-800{
+    width:800px;
+  }
+
+  .tableau table.wd-900{
+    width:900px;
+  }
+
+  .tableau table.wd-1000{
+    width:1000px;
+  }
+
+  .tableau table.wd-1200{
+    width:1200px;
+  }
+
+  .tableau table.wd-1300{
+    width:1300px;
+  }
+}
+/*----------  Mini tablette  ----------*/
+/*----------  Mini tablette  ----------*/
+
+
+
+/*----------  Tablette  ----------*/
+/*----------  Tablette  ----------*/
+
+@media screen and (min-width: 920px) and (max-width: 1190px) {
+  .container-contents {
+    margin-right: 0px;
+  }
+
+  .tableau table.wd-600{
+    width:600px;
+  }
+
+  .tableau table.wd-700{
+    width:700px;
+  }
+
+  .tableau table.wd-800{
+    width:800px;
+  }
+
+  .tableau table.wd-900{
+    width:900px;
+  }
+
+  .tableau table.wd-1000{
+    width:1000px;
+  }
+
+  .tableau table.wd-1200{
+    width:1200px;
+  }
+
+  .tableau table.wd-1300{
+    width:1300px;
+  }
+}
+
+/*----------  Tablette  ----------*/
+/*----------  Tablette  ----------*/

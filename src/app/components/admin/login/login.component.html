@@ -1,0 +1,51 @@
+<div class="container-form">
+    <div class="form-logo">
+        <h3>GabomaPay</h3>
+    </div>
+    <form #formLogin="ngForm" (ngSubmit)="login(formLogin)" class="card-form" autocomplete="off">
+        <div class="form-title">
+            <h2>Se connecter</h2>
+            <p>Entrez vos identifiants pour accéder à votre compte</p>
+        </div>
+
+        <div class="error-box" [class.active]="invalide">
+            <p> {{ invalide }}</p>
+        </div>
+
+        <div class="form-body">
+            <div class="group-form">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                        <title>ionicons-v5-o</title>
+                        <rect x="48" y="96" width="416" height="320" rx="40" ry="40"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                        <polyline points="112 160 256 272 400 160"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                    </svg>
+                </span>
+                <input type="email" name="email" id="" placeholder="Email" ngModel class="no-select">
+            </div>
+            <p *ngIf="errors.email" class="error-title"> {{errors.email}} </p>
+
+            <div class="group-form">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                        <title>ionicons-v5-g</title>
+                        <path d="M336,208V113a80,80,0,0,0-160,0v95"
+                            style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                        <rect x="96" y="208" width="320" height="272" rx="48" ry="48"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                    </svg>
+                </span>
+                <input type="password" name="password" id="" placeholder="Mot de passe" ngModel class="no-select">
+            </div>
+            <p *ngIf="errors.password" class="error-title"> {{errors.password}} </p>
+
+            <div class="form-btn">
+                <button type="submit" class="button" [class.button--loading]="isLoading" [disabled]="isLoading">
+                    <span class="button__text">Connecter</span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

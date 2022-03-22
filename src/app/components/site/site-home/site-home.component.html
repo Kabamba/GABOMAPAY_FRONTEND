@@ -1,0 +1,402 @@
+<div class="wrapper-site">
+    <app-site-nav></app-site-nav>
+    <!-- Modal -->
+    <div class="simule-modal" (click)="closeModal($event)">
+        <div class="simule-modal-wrapper" (click)="stop($event)">
+            <div class="simule-title">
+                <span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.6389 14.3958H17.5906C16.1042 14.3949 14.8994 13.1909 14.8985 11.7045C14.8985 10.218 16.1042 9.01413 17.5906 9.01321H21.6389"
+                            stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.0486 11.6429H17.7369" stroke="#200E32" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.74766 3H16.3911C19.2892 3 21.6388 5.34951 21.6388 8.24766V15.4247C21.6388 18.3229 19.2892 20.6724 16.3911 20.6724H7.74766C4.84951 20.6724 2.5 18.3229 2.5 15.4247V8.24766C2.5 5.34951 4.84951 3 7.74766 3Z"
+                            stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7.03561 7.53817H12.4346" stroke="#200E32" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <h2>Choisissez une opération</h2>
+            </div>
+
+            <div class="simule-body">
+                <div class="btn-options">
+                    <a routerLink="/site/transfert/international">
+                        <span class="icon">
+                            <svg width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m292.32 436.8c-24.641 4.4805-49.281 9.5195-74.48 11.199-12.32 0.55859-24.641-3.9219-33.602-12.32-8.3984-7.8398-13.441-17.922-15.68-29.121-14.559 0.55859-29.68-6.1602-38.641-17.922-6.1602-8.3984-10.641-19.039-10.641-29.68v-128.8c0-14.559 5.6016-29.121 16.238-38.641 7.2812-6.7188 17.359-11.199 27.441-12.879 30.801-4.4805 61.602-10.078 91.84-14.559 1.1211 8.3984 1.6797 16.801 0 25.199-30.238 5.0391-60.48 10.078-90.719 14.559-11.199 2.2383-19.602 13.441-19.602 24.641v129.92c0 8.9609 4.4805 17.359 12.32 21.84 5.0391 2.8008 11.199 2.2383 16.238 1.6797 44.801-5.6016 89.039-14.559 133.28-24.078 26.879-6.1602 53.762-11.199 80.641-15.68 28.559-3.9219 57.68-7.2812 86.801-6.7188 12.879 0 22.398-12.32 22.398-24.641v-118.72c0-11.199-6.7188-23.52-18.48-25.762-35.84-2.8008-71.68-0.55859-106.96 3.9219-0.55859-8.3984-0.55859-16.801 0.55859-25.199 31.922-3.9219 63.84-6.7188 95.762-5.0391 7.2812 0.55859 15.121 0.55859 21.84 2.8008 11.199 3.9219 20.719 12.32 25.762 22.961 2.8008 5.0391 3.9219 10.078 5.6016 15.68 6.7188 0.55859 13.441 0.55859 19.039 3.3594 13.441 5.0391 22.961 16.801 27.441 30.801 2.2383 6.1602 2.8008 12.879 2.8008 19.602v117.6c0 12.32-5.0391 24.641-12.879 33.602-8.3984 10.078-21.84 15.68-34.719 15.121-39.199-1.1211-78.961 5.0391-117.6 11.762-36.961 8.3867-74.48 16.785-112 23.508zm13.441-27.441c30.238-5.6016 60.48-12.879 90.719-19.039 39.762-7.2812 80.078-13.441 120.4-13.441 4.4805 0 8.9609 0 12.879-1.6797 8.3984-3.9219 13.441-12.879 13.441-22.398v-119.84c0-7.8398-2.8008-15.68-8.3984-20.719-3.9219-3.9219-10.078-5.0391-15.121-5.6016v104.16c0 18.48-10.641 37.52-28 45.359-6.1602 2.8008-12.879 4.4805-19.602 3.9219-38.078-0.55859-75.602 4.4805-113.12 11.199-20.16 3.3594-40.32 8.3984-59.922 12.32-35.281 7.8398-70.559 14.559-106.4 19.602 1.1211 5.0391 3.3594 9.5195 7.2812 13.441 5.0391 5.0391 12.32 7.2812 19.039 6.1602 29.121-2.8047 58.242-7.8438 86.805-13.445z" />
+                                <path
+                                    d="m187.6 357.84c-4.4805 0.55859-10.078 2.2383-14.559 0-5.6016-3.3594-4.4805-12.32 1.6797-14.559 17.922-2.8008 36.398-5.0391 54.32-8.3984 3.3594-0.55859 7.2812 0 9.5195 2.8008 3.3594 4.4805 1.1211 11.762-4.4805 12.879-15.684 3.3594-30.801 5.0391-46.48 7.2773z" />
+                                <path
+                                    d="m320.88 310.24c-13.441 2.2383-28-2.2383-38.078-11.762-7.2812-6.7188-12.32-15.68-14-25.199-2.8008-14 1.6797-29.121 11.762-39.199 10.078-10.641 24.641-16.238 39.199-14 9.5195 1.1211 18.48 5.0391 25.762 11.762 11.762 11.199 16.801 29.121 12.879 44.801-5.043 17.918-20.723 30.801-37.523 33.598zm-1.6797-16.238c8.3984-1.6797 16.238-6.7188 20.719-14.559 4.4805-8.3984 5.0391-19.602 0.55859-28-5.6016-10.641-17.922-17.359-29.68-15.121-15.68 1.6797-28 16.801-25.762 32.48 0.55859 8.3984 5.6016 16.801 12.879 21.281 5.6055 3.918 14.008 5.5977 21.285 3.918z" />
+                                <path
+                                    d="m409.92 204.96c-2.2383 0-3.9219 0.55859-6.1602 0-4.4805-1.6797-6.7188-7.2812-4.4805-11.762 1.1211-2.8008 3.9219-4.4805 7.2812-4.4805 17.922-1.1211 35.84-1.6797 53.762-1.1211 4.4805 0 7.8398 3.9219 8.3984 8.3984 0.55859 5.0391-4.4805 8.9609-8.9609 8.3984-16.801-1.1133-33.602-1.1133-49.84 0.56641z" />
+                                <path
+                                    d="m319.76 197.12c-1.6797 2.8008-5.0391 5.0391-8.3984 4.4805-4.4805-0.55859-8.3984-5.0391-8.3984-9.5195v-88.48c-7.2812 6.7188-14 13.441-21.281 20.16-3.3594 3.3594-8.3984 3.3594-12.32 0.55859-4.4805-3.3594-4.4805-10.078-0.55859-14 11.762-11.762 24.078-22.961 35.84-34.719 3.3594-3.3594 9.5195-4.4805 12.879-0.55859 11.762 11.762 23.52 23.52 34.719 35.84 3.9219 3.9219 3.3594 12.32-2.2383 15.121-3.3594 1.1211-7.8398 1.1211-10.078-1.6797-6.7188-6.7188-12.879-14-19.602-20.719v86.238c0.55469 2.7969 1.1172 5.0352-0.5625 7.2773z" />
+                            </svg>
+                        </span>
+                        <span class="title">Transfert international</span>
+
+                        <span class="icon icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <polyline points="184 112 328 256 184 400"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a routerLink="/site/envoie_compte/rdc" *ngIf="infos.country_id == 50">
+                        <span class="icon">
+                            <svg width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m292.32 436.8c-24.641 4.4805-49.281 9.5195-74.48 11.199-12.32 0.55859-24.641-3.9219-33.602-12.32-8.3984-7.8398-13.441-17.922-15.68-29.121-14.559 0.55859-29.68-6.1602-38.641-17.922-6.1602-8.3984-10.641-19.039-10.641-29.68v-128.8c0-14.559 5.6016-29.121 16.238-38.641 7.2812-6.7188 17.359-11.199 27.441-12.879 30.801-4.4805 61.602-10.078 91.84-14.559 1.1211 8.3984 1.6797 16.801 0 25.199-30.238 5.0391-60.48 10.078-90.719 14.559-11.199 2.2383-19.602 13.441-19.602 24.641v129.92c0 8.9609 4.4805 17.359 12.32 21.84 5.0391 2.8008 11.199 2.2383 16.238 1.6797 44.801-5.6016 89.039-14.559 133.28-24.078 26.879-6.1602 53.762-11.199 80.641-15.68 28.559-3.9219 57.68-7.2812 86.801-6.7188 12.879 0 22.398-12.32 22.398-24.641v-118.72c0-11.199-6.7188-23.52-18.48-25.762-35.84-2.8008-71.68-0.55859-106.96 3.9219-0.55859-8.3984-0.55859-16.801 0.55859-25.199 31.922-3.9219 63.84-6.7188 95.762-5.0391 7.2812 0.55859 15.121 0.55859 21.84 2.8008 11.199 3.9219 20.719 12.32 25.762 22.961 2.8008 5.0391 3.9219 10.078 5.6016 15.68 6.7188 0.55859 13.441 0.55859 19.039 3.3594 13.441 5.0391 22.961 16.801 27.441 30.801 2.2383 6.1602 2.8008 12.879 2.8008 19.602v117.6c0 12.32-5.0391 24.641-12.879 33.602-8.3984 10.078-21.84 15.68-34.719 15.121-39.199-1.1211-78.961 5.0391-117.6 11.762-36.961 8.3867-74.48 16.785-112 23.508zm13.441-27.441c30.238-5.6016 60.48-12.879 90.719-19.039 39.762-7.2812 80.078-13.441 120.4-13.441 4.4805 0 8.9609 0 12.879-1.6797 8.3984-3.9219 13.441-12.879 13.441-22.398v-119.84c0-7.8398-2.8008-15.68-8.3984-20.719-3.9219-3.9219-10.078-5.0391-15.121-5.6016v104.16c0 18.48-10.641 37.52-28 45.359-6.1602 2.8008-12.879 4.4805-19.602 3.9219-38.078-0.55859-75.602 4.4805-113.12 11.199-20.16 3.3594-40.32 8.3984-59.922 12.32-35.281 7.8398-70.559 14.559-106.4 19.602 1.1211 5.0391 3.3594 9.5195 7.2812 13.441 5.0391 5.0391 12.32 7.2812 19.039 6.1602 29.121-2.8047 58.242-7.8438 86.805-13.445z" />
+                                <path
+                                    d="m187.6 357.84c-4.4805 0.55859-10.078 2.2383-14.559 0-5.6016-3.3594-4.4805-12.32 1.6797-14.559 17.922-2.8008 36.398-5.0391 54.32-8.3984 3.3594-0.55859 7.2812 0 9.5195 2.8008 3.3594 4.4805 1.1211 11.762-4.4805 12.879-15.684 3.3594-30.801 5.0391-46.48 7.2773z" />
+                                <path
+                                    d="m320.88 310.24c-13.441 2.2383-28-2.2383-38.078-11.762-7.2812-6.7188-12.32-15.68-14-25.199-2.8008-14 1.6797-29.121 11.762-39.199 10.078-10.641 24.641-16.238 39.199-14 9.5195 1.1211 18.48 5.0391 25.762 11.762 11.762 11.199 16.801 29.121 12.879 44.801-5.043 17.918-20.723 30.801-37.523 33.598zm-1.6797-16.238c8.3984-1.6797 16.238-6.7188 20.719-14.559 4.4805-8.3984 5.0391-19.602 0.55859-28-5.6016-10.641-17.922-17.359-29.68-15.121-15.68 1.6797-28 16.801-25.762 32.48 0.55859 8.3984 5.6016 16.801 12.879 21.281 5.6055 3.918 14.008 5.5977 21.285 3.918z" />
+                                <path
+                                    d="m409.92 204.96c-2.2383 0-3.9219 0.55859-6.1602 0-4.4805-1.6797-6.7188-7.2812-4.4805-11.762 1.1211-2.8008 3.9219-4.4805 7.2812-4.4805 17.922-1.1211 35.84-1.6797 53.762-1.1211 4.4805 0 7.8398 3.9219 8.3984 8.3984 0.55859 5.0391-4.4805 8.9609-8.9609 8.3984-16.801-1.1133-33.602-1.1133-49.84 0.56641z" />
+                                <path
+                                    d="m319.76 197.12c-1.6797 2.8008-5.0391 5.0391-8.3984 4.4805-4.4805-0.55859-8.3984-5.0391-8.3984-9.5195v-88.48c-7.2812 6.7188-14 13.441-21.281 20.16-3.3594 3.3594-8.3984 3.3594-12.32 0.55859-4.4805-3.3594-4.4805-10.078-0.55859-14 11.762-11.762 24.078-22.961 35.84-34.719 3.3594-3.3594 9.5195-4.4805 12.879-0.55859 11.762 11.762 23.52 23.52 34.719 35.84 3.9219 3.9219 3.3594 12.32-2.2383 15.121-3.3594 1.1211-7.8398 1.1211-10.078-1.6797-6.7188-6.7188-12.879-14-19.602-20.719v86.238c0.55469 2.7969 1.1172 5.0352-0.5625 7.2773z" />
+                            </svg>
+                        </span>
+                        <span class="title">Transfert locale</span>
+
+                        <span class="icon icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <polyline points="184 112 328 256 184 400"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a routerLink="/site/envoie_compte/gab" *ngIf="infos.country_id == 77">
+                        <span class="icon">
+                            <svg width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m292.32 436.8c-24.641 4.4805-49.281 9.5195-74.48 11.199-12.32 0.55859-24.641-3.9219-33.602-12.32-8.3984-7.8398-13.441-17.922-15.68-29.121-14.559 0.55859-29.68-6.1602-38.641-17.922-6.1602-8.3984-10.641-19.039-10.641-29.68v-128.8c0-14.559 5.6016-29.121 16.238-38.641 7.2812-6.7188 17.359-11.199 27.441-12.879 30.801-4.4805 61.602-10.078 91.84-14.559 1.1211 8.3984 1.6797 16.801 0 25.199-30.238 5.0391-60.48 10.078-90.719 14.559-11.199 2.2383-19.602 13.441-19.602 24.641v129.92c0 8.9609 4.4805 17.359 12.32 21.84 5.0391 2.8008 11.199 2.2383 16.238 1.6797 44.801-5.6016 89.039-14.559 133.28-24.078 26.879-6.1602 53.762-11.199 80.641-15.68 28.559-3.9219 57.68-7.2812 86.801-6.7188 12.879 0 22.398-12.32 22.398-24.641v-118.72c0-11.199-6.7188-23.52-18.48-25.762-35.84-2.8008-71.68-0.55859-106.96 3.9219-0.55859-8.3984-0.55859-16.801 0.55859-25.199 31.922-3.9219 63.84-6.7188 95.762-5.0391 7.2812 0.55859 15.121 0.55859 21.84 2.8008 11.199 3.9219 20.719 12.32 25.762 22.961 2.8008 5.0391 3.9219 10.078 5.6016 15.68 6.7188 0.55859 13.441 0.55859 19.039 3.3594 13.441 5.0391 22.961 16.801 27.441 30.801 2.2383 6.1602 2.8008 12.879 2.8008 19.602v117.6c0 12.32-5.0391 24.641-12.879 33.602-8.3984 10.078-21.84 15.68-34.719 15.121-39.199-1.1211-78.961 5.0391-117.6 11.762-36.961 8.3867-74.48 16.785-112 23.508zm13.441-27.441c30.238-5.6016 60.48-12.879 90.719-19.039 39.762-7.2812 80.078-13.441 120.4-13.441 4.4805 0 8.9609 0 12.879-1.6797 8.3984-3.9219 13.441-12.879 13.441-22.398v-119.84c0-7.8398-2.8008-15.68-8.3984-20.719-3.9219-3.9219-10.078-5.0391-15.121-5.6016v104.16c0 18.48-10.641 37.52-28 45.359-6.1602 2.8008-12.879 4.4805-19.602 3.9219-38.078-0.55859-75.602 4.4805-113.12 11.199-20.16 3.3594-40.32 8.3984-59.922 12.32-35.281 7.8398-70.559 14.559-106.4 19.602 1.1211 5.0391 3.3594 9.5195 7.2812 13.441 5.0391 5.0391 12.32 7.2812 19.039 6.1602 29.121-2.8047 58.242-7.8438 86.805-13.445z" />
+                                <path
+                                    d="m187.6 357.84c-4.4805 0.55859-10.078 2.2383-14.559 0-5.6016-3.3594-4.4805-12.32 1.6797-14.559 17.922-2.8008 36.398-5.0391 54.32-8.3984 3.3594-0.55859 7.2812 0 9.5195 2.8008 3.3594 4.4805 1.1211 11.762-4.4805 12.879-15.684 3.3594-30.801 5.0391-46.48 7.2773z" />
+                                <path
+                                    d="m320.88 310.24c-13.441 2.2383-28-2.2383-38.078-11.762-7.2812-6.7188-12.32-15.68-14-25.199-2.8008-14 1.6797-29.121 11.762-39.199 10.078-10.641 24.641-16.238 39.199-14 9.5195 1.1211 18.48 5.0391 25.762 11.762 11.762 11.199 16.801 29.121 12.879 44.801-5.043 17.918-20.723 30.801-37.523 33.598zm-1.6797-16.238c8.3984-1.6797 16.238-6.7188 20.719-14.559 4.4805-8.3984 5.0391-19.602 0.55859-28-5.6016-10.641-17.922-17.359-29.68-15.121-15.68 1.6797-28 16.801-25.762 32.48 0.55859 8.3984 5.6016 16.801 12.879 21.281 5.6055 3.918 14.008 5.5977 21.285 3.918z" />
+                                <path
+                                    d="m409.92 204.96c-2.2383 0-3.9219 0.55859-6.1602 0-4.4805-1.6797-6.7188-7.2812-4.4805-11.762 1.1211-2.8008 3.9219-4.4805 7.2812-4.4805 17.922-1.1211 35.84-1.6797 53.762-1.1211 4.4805 0 7.8398 3.9219 8.3984 8.3984 0.55859 5.0391-4.4805 8.9609-8.9609 8.3984-16.801-1.1133-33.602-1.1133-49.84 0.56641z" />
+                                <path
+                                    d="m319.76 197.12c-1.6797 2.8008-5.0391 5.0391-8.3984 4.4805-4.4805-0.55859-8.3984-5.0391-8.3984-9.5195v-88.48c-7.2812 6.7188-14 13.441-21.281 20.16-3.3594 3.3594-8.3984 3.3594-12.32 0.55859-4.4805-3.3594-4.4805-10.078-0.55859-14 11.762-11.762 24.078-22.961 35.84-34.719 3.3594-3.3594 9.5195-4.4805 12.879-0.55859 11.762 11.762 23.52 23.52 34.719 35.84 3.9219 3.9219 3.3594 12.32-2.2383 15.121-3.3594 1.1211-7.8398 1.1211-10.078-1.6797-6.7188-6.7188-12.879-14-19.602-20.719v86.238c0.55469 2.7969 1.1172 5.0352-0.5625 7.2773z" />
+                            </svg>
+                        </span>
+                        <span class="title">Transfert locale</span>
+
+                        <span class="icon icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <polyline points="184 112 328 256 184 400"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="close-modal">
+                <button id="close-modal" (click)="closeModal($event)">Fermer</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+    <!-- contents -->
+    <div class="contents-site">
+        <div class="content-bloc">
+            <!-- Profil-user -->
+            <div class="profil-user pd-20">
+                <div class="profil-img" *ngIf="user.profile">
+                    <img src="{{urlImage}}/profile/{{user.profile}}" alt="{{user.name}}">
+                </div>
+                <div class="user-skeleton skel-background" [class.show]="showSkeleton"></div>
+
+                <div class="profil-img" *ngIf="!user.profile && !showSkeleton">
+                    <img src="{{urlImage}}/profile/default.webp" alt="{{user.name}}">
+                </div>
+
+                <div class="profil-text">
+                    <span class="label">Bienvenue,</span>
+                    <p>{{user.prenom}} {{user.name}}</p>
+                    <p class="skel-para skel-background" [class.show]="showSkeleton"></p>
+                </div>
+            </div>
+
+
+            <!-- Profil-user -->
+
+            <!-- Card -->
+            <div class="card-content pd-20" *ngIf="!showSkeleton">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-logo">
+                            <p>Gaboma<span>Pay</span></p>
+                        </div>
+                        <div class="card-icon">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                    <path d="M332.69,320a115,115,0,0,0-152.8,0"
+                                        style="fill:none;stroke:#8A9E97;stroke-linecap:square;stroke-linejoin:round;stroke-width:42px" />
+                                    <path d="M393.74,259a201.26,201.26,0,0,0-274.92,0"
+                                        style="fill:none;stroke:#8A9E97;stroke-linecap:square;stroke-linejoin:round;stroke-width:42px" />
+                                    <path d="M448,191.52a288,288,0,0,0-383.44,0"
+                                        style="fill:none;stroke:#8A9E97;stroke-linecap:square;stroke-linejoin:round;stroke-width:42px" />
+                                    <path d="M300.67,384,256,433l-44.34-49a56.73,56.73,0,0,1,88.92,0Z" />
+                                </svg>
+                            </span>
+
+                            <span class="icon">
+                                <svg width="26px" height="26px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <circle cx="7" cy="12" r="7" fill="#EA001B" />
+                                        <circle cx="17" cy="12" r="7" fill="#FFA200" fill-opacity=".8" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>Votre solde</h4>
+                            <h1>{{user.country_id == '77' ? 'FCFA' : 'USD' }} {{user.solde}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skel-card pd-20" [class.show]="showSkeleton">
+                <div class="skel-card-box skel-background"></div>
+            </div>
+            <!-- Card -->
+
+            <!-- Nos partainer -->
+            <!-- <div class="partenaires">
+                <div class="title">
+                    <h2>Nos partenaires</h2>
+                </div>
+                <div class="partenaire-content">
+                    <div class="part-flex">
+                        <div class="parten-bloc" *ngFor="let img of partenairImg">
+                            <img [src]="img.imgUrl" [alt]="img.imgUrl" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Nos partainer -->
+
+            <!-- Publicite -->
+
+
+
+            <div class="card-pub">
+                <div class="skeleton-carousel" [class.show]="showSkeleton">
+                    <div class="skel-card-carousel  skel-background"></div>
+                </div>
+                <swiper [config]="config" *ngIf="!showSkeleton">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" *ngFor="let pub of pubs">
+                            <div class="card-bloc">
+                                <div class="pub-text">
+                                    <p>{{pub.description}}</p>
+                                </div>
+                                <div class="pub-img">
+                                    <img src="{{src}}/posts/{{pub.chemin}}" alt="{{pub.id}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </swiper>
+            </div>
+            <!-- Publicite -->
+
+            <!-- Transaction -->
+            <div class="transactions pd-20">
+                <div class="title" *ngIf="transactions.length">
+                    <h2>Les dernières transactions</h2>
+                </div>
+
+                <div class="transac-content">
+                    <a [routerLink]="['/site/transactions/detail/',transaction.id]"
+                        *ngFor="let i = index let transaction of transactions"
+                        class="transac-box no-select">
+                        <div class="transac-id-right">
+                            <div class="transac-id">
+                                <span>{{9 >= i ? '0' : ''}}{{i+1}}</span>
+                            </div>
+                            <div class="transac-text">
+                                <span class="date">{{transaction.date_time_trans}}</span>
+                                <p>{{transaction.type_trans_name}} 
+                                    <span *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.user.id == user.id">sortant</span>
+                                    <span *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.second_id == user.id">reçu</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="transac-mont">
+                            <p>
+                                <span>{{transaction.montant}}</span>
+                                <span>{{user.country_id == '77' ? ' FCFA' : ' USD'}}</span>
+                            </p>
+                        </div>
+                    </a>
+
+                    <div class="skel-transac" [class.show]="showSkeleton">
+                        <div class="skel-box">
+                            <div class="skel-id skel-background"></div>
+                            <div class="skel-text">
+                                <p class="skel-para skel-background"></p>
+                                <p class="skel-para skel-background"></p>
+                            </div>
+                        </div>
+                        <div class="skel-price">
+                            <p class="skel-para skel-background"></p>
+                        </div>
+                    </div>
+
+                    <div class="skel-transac" [class.show]="showSkeleton">
+                        <div class="skel-box">
+                            <div class="skel-id skel-background"></div>
+                            <div class="skel-text">
+                                <p class="skel-para skel-background"></p>
+                                <p class="skel-para skel-background"></p>
+                            </div>
+                        </div>
+                        <div class="skel-price">
+                            <p class="skel-para skel-background"></p>
+                        </div>
+                    </div>
+
+                    <div class="skel-transac" [class.show]="showSkeleton">
+                        <div class="skel-box">
+                            <div class="skel-id skel-background"></div>
+                            <div class="skel-text">
+                                <p class="skel-para skel-background"></p>
+                                <p class="skel-para skel-background"></p>
+                            </div>
+                        </div>
+                        <div class="skel-price">
+                            <p class="skel-para skel-background"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Transaction -->
+        </div>
+    </div>
+    <!-- contents -->
+
+    <div class="header-bottom">
+        <div class="nav-bottom">
+            <div class="link-bloc">
+
+                <a [routerLink]="['/site/home']" class="no-select" *ngIf="!showSkeleton">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714"
+                                stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="title">Accueil</span>
+                </a>
+                <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
+
+                <a [routerLink]="['/site/transactions']" class="no-select" *ngIf="!showSkeleton">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2498 12.0005C21.2498 17.1095 17.1088 21.2505 11.9998 21.2505C6.8908 21.2505 2.7498 17.1095 2.7498 12.0005C2.7498 6.89149 6.8908 2.75049 11.9998 2.75049C17.1088 2.75049 21.2498 6.89149 21.2498 12.0005Z"
+                                stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.4314 14.9429L11.6614 12.6939V7.84689" stroke="#200E32" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </span>
+                    <span class="title">Transcac</span>
+                </a>
+                <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
+            </div>
+
+            <a href="#" class="plus no-select" (click)="openModal($event)"
+                *ngIf="infos.country_id == 50 || infos.country_id == 77">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                        <line x1="256" y1="112" x2="256" y2="400"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                        <line x1="400" y1="256" x2="112" y2="256"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                    </svg>
+                </span>
+            </a>
+
+            <div class="link-bloc">
+                <div *ngIf="infos.country_id == 50 || infos.country_id == 77">
+                    <a *ngIf="!showSkeleton" routerLink="/site/retrait" class="no-select">
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.8396 20.1642V6.54645" stroke="#200E32" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.9172 16.0681L16.8394 20.1648L12.7617 16.0681" stroke="#200E32"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.91109 3.83289V17.4507" stroke="#200E32" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.83344 7.929L6.91121 3.83234L10.989 7.929" stroke="#200E32"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="title">Retrait</span>
+                    </a>
+                    <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
+                </div>
+
+                <a [routerLink]="['/site/recharge']" class="no-select" *ngIf="!showSkeleton">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.8396 20.1642V6.54645" stroke="#200E32" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.9172 16.0681L16.8394 20.1648L12.7617 16.0681" stroke="#200E32"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.91109 3.83289V17.4507" stroke="#200E32" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.83344 7.929L6.91121 3.83234L10.989 7.929" stroke="#200E32" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="title">Recharge</span>
+                </a>
+                <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
+
+                <div  *ngIf="infos.country_id != 50 && infos.country_id != 77">
+                    <a [routerLink]="['/site/transfert/international']" class="no-select" *ngIf="!showSkeleton">
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.8396 20.1642V6.54645" stroke="#200E32" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.9172 16.0681L16.8394 20.1648L12.7617 16.0681" stroke="#200E32"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.91109 3.83289V17.4507" stroke="#200E32" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.83344 7.929L6.91121 3.83234L10.989 7.929" stroke="#200E32"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="title">Transfert</span>
+                    </a>
+                    <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

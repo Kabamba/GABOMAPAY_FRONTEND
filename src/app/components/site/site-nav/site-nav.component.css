@@ -1,0 +1,64 @@
+.header-content svg path,
+.header-content svg circle,
+.header-content svg polygon,
+.header-content svg polyline,
+.header-content svg line,
+.header-content svg rect {
+  stroke: var(--grey-light) !important;
+  fill:transparent !important;
+}
+
+.icon-left-3{
+  color:var(--grey-light) !important;
+  font-size:24px;
+}
+
+/*----------  Header-Content  ----------*/
+.header-content {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--black-base);
+    color:var(--white);
+    line-height: 0px;
+  }
+  
+  .header-content .profil-header a {
+    display: inline-block;
+    padding: 5px;
+    line-height: 0px;
+  }
+  
+  .header-content .logo-header svg{
+    width:40px;
+    height:40px;
+  }
+  
+  .header-content svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header-content h2 {
+    font-family: "FiraCode";
+    user-select: none;
+    color:var(--white);
+  }
+  
+  .header-content h2 span {
+    color: var(--orange-base);
+  }
+  /*----------  Header-Content  ----------*/
+  
+  @media screen and (min-width:700px) and (max-width:1030px){
+    .header-content{
+      padding:20px 60px;
+    }
+}

@@ -1,0 +1,78 @@
+<form [formGroup]="brandForm" class="wrapper-site form-container pd-20">
+    <!-- <div class="form-logo">
+        <h1>Gaboma<span>Pay</span></h1>
+        <p>Paiment mobile pour tous</p>
+    </div> -->
+    <div class="form-card">
+        <div class="form-header">
+            <div class="form-icon">
+                <div class="circle-icon">
+                    <div class="circle-icon_1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                            <path
+                                d="M344,144c-3.92,52.87-44,96-88,96s-84.15-43.12-88-96c-4-55,35-96,88-96S348,90,344,144Z"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            <path
+                                d="M256,304c-87,0-175.3,48-191.64,138.6C62.39,453.52,68.57,464,80,464H432c11.44,0,17.62-10.48,15.65-21.4C431.3,352,343,304,256,304Z"
+                                style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="form-title">
+                <h1>Connexion</h1>
+            </div>
+        </div>
+
+        <div class="error-box" [class.active]="invalide">
+            <p> {{ invalide }}</p>
+        </div>
+
+        <div class="form-content">
+            <div class="group-form" [class.error]="errors.email">
+                <input type="email" id="email" formControlName="email" readonly placeholder="gabomapay@gmail.com" (focus)="removeAutocomplete($event)" autocomplete="false">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                        <title>ionicons-v5-o</title>
+                        <rect x="48" y="96" width="416" height="320" rx="40" ry="40"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px">
+                        </rect>
+                        <polyline points="112 160 256 272 400 160"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px">
+                        </polyline>
+                    </svg>
+                </span>
+            </div>
+            <span class="error-title" *ngIf="errors.email"> {{errors.email}} </span>
+
+            <div class="group-form" [class.error]="errors.password">
+                <input type="password" id="password" formControlName="password" readonly placeholder="Mot de passe" (focus)="removeAutocomplete($event)" autocomplete="false">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                        <title>ionicons-v5-i</title>
+                        <path
+                            d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
+                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                        <circle cx="256" cy="256" r="80"
+                            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                    </svg>
+                </span>
+            </div>
+            <span class="error-title" *ngIf="errors.password"> {{errors.password}} </span>
+
+            <div class="form-btn">
+                <button type="submit" (click)="login()" class="button" [class.button--loading]="isLoading"
+                    [disabled]="isLoading">
+                    <span class="button__text">Connecter</span>
+                </button>
+
+
+            </div>
+
+            <div class="forgot">
+                <a [routerLink]="['/site/forgot']">Mot de passe oublié ?</a>
+                <p>Pas de compte ? <a [routerLink]="['/site/register']">S'inscrire</a></p>
+            </div>
+        </div>
+    </div>
+</form>

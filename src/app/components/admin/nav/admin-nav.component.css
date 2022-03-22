@@ -1,0 +1,136 @@
+/*----------  Menu Verticale Right  ----------*/
+
+.container-navigation {
+    position: relative;
+    width: 260px;
+    z-index:300;
+  }
+  
+  .nav-bloc {
+    position: fixed;
+    top:0;
+    width: 260px;
+    height: 100%;
+    background: var(--grey-secondary);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    border-left: 20px solid var(--grey-secondary);
+  }
+  
+  .nav-bloc::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+  }
+  
+  .nav-logo {
+    padding: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .nav-logo h2 {
+    font-family: "FiraCode";
+  }
+  
+  .nav-links {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .nav-links ul li {
+    width: 100%;
+    display: block;
+    border-radius: 35px 0 0 35px;
+    display: flex;
+    align-items: center;
+    line-height: 0px;
+  }
+  
+  .nav-links ul li.active,
+  .nav-links ul li:hover {
+    background: var(--grey-base);
+  }
+  
+  .nav-links ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    color: var(--black-primary);
+    padding: 15px 20px;
+    position: relative;
+    line-height: 0px;
+    outline:none !important;
+    cursor:pointer;
+  }
+  
+  .nav-links ul li.active a::before,
+  .nav-links ul li:hover a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    transform: translateX(1px);
+    border-radius: 50%;
+    box-shadow: 35px 30px 0 10px var(--grey-base);
+    pointer-events: none;
+  }
+  
+  .nav-links ul li.active a::after,
+  .nav-links ul li:hover a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    background: transparent;
+    transform: translateX(1px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 35px -27px 0 10px var(--grey-base);
+    pointer-events: none;
+  }
+  
+  .nav-links ul li a .icon svg {
+    display: block;
+    margin-right: 10px;
+    pointer-events: none;
+    transition: transform 0.2s ease-in 0s;
+  }
+  
+  .nav-links ul li:hover a .icon svg {
+    transform: scale(1.1);
+  }
+
+  /*----------  Ended Menu Verticale left  ----------*/
+  /*----------  Ended Menu Verticale left  ----------*/
+
+/*----------  Responsive Default  ----------*/
+
+@media screen and (min-width: 300px) and (max-width: 995px) {
+
+  /*----------  Left verticale  ----------*/
+
+  .container-navigation {
+    margin-left: -260px;
+    transition: 0.4s ease 0s;
+    z-index: 500;
+  }
+
+  .container-navigation.active {
+    margin-left: 0;
+  }
+
+  /*----------  Left verticale  ----------*/
+
+}
+/*----------  Responsive Default  ----------*/
+
+  

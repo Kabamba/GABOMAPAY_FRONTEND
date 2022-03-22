@@ -1,0 +1,15 @@
+.pr-img .cancel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.pr-img .cancel .icon-cancel {
+  font-size: 15px;
+}
+
+.error-box{
+  padding:15px;
+}

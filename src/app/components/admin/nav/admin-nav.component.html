@@ -1,0 +1,229 @@
+<div class="container-navigation" [class.active]="addActive">
+    <div class="nav-bloc">
+        <div class="nav-logo">
+            <h2>GabomaPay</h2>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/home">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-i</title>
+                                <rect x="48" y="48" width="176" height="176" rx="20" ry="20"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="288" y="48" width="176" height="176" rx="20" ry="20"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="48" y="288" width="176" height="176" rx="20" ry="20"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="288" y="288" width="176" height="176" rx="20" ry="20"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/admins">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-n</title>
+                                <rect x="48" y="96" width="416" height="304" rx="32.14" ry="32.14"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="16" y1="416" x2="496" y2="416"
+                                    style="stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Administrateurs</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/pub">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-g</title>
+                                <rect x="48" y="96" width="416" height="320" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="384" y="336" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="384" y="256" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="384" y="176" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="384" y="96" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="48" y="336" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="48" y="256" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="48" y="176" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="48" y="96" width="80" height="80" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="128" y="96" width="256" height="160" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="128" y="256" width="256" height="160" rx="28" ry="28"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Publicités</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/admin/transactions']">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-b</title>
+                                <polyline points="304 48 416 160 304 272"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="398.87" y1="160" x2="96" y2="160"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <polyline points="208 464 96 352 208 240"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="114" y1="352" x2="416" y2="352"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Transactions</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/users">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-j</title>
+                                <path
+                                    d="M402,168c-2.93,40.67-33.1,72-66,72s-63.12-31.32-66-72c-3-42.31,26.37-72,66-72S405,126.46,402,168Z"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path
+                                    d="M336,304c-65.17,0-127.84,32.37-143.54,95.41-2.08,8.34,3.15,16.59,11.72,16.59H467.83c8.57,0,13.77-8.25,11.72-16.59C463.85,335.36,401.18,304,336,304Z"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <path
+                                    d="M200,185.94C197.66,218.42,173.28,244,147,244S96.3,218.43,94,185.94C91.61,152.15,115.34,128,147,128S202.39,152.77,200,185.94Z"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path
+                                    d="M206,306c-18.05-8.27-37.93-11.45-59-11.45-52,0-102.1,25.85-114.65,76.2C30.7,377.41,34.88,384,41.72,384H154"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Utilisateurs</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/devise">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <rect x="32" y="80" width="448" height="256" rx="16" ry="16"
+                                    transform="translate(512 416) rotate(180)"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="64" y1="384" x2="448" y2="384"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="96" y1="432" x2="416" y2="432"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <circle cx="256" cy="208" r="80"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M480,160a80,80,0,0,1-80-80"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M32,160a80,80,0,0,0,80-80"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M480,256a80,80,0,0,0-80,80"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M32,256a80,80,0,0,1,80,80"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Dévise</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/pays">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <path
+                                    d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Z"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <path
+                                    d="M256,48c-58.07,0-112.67,93.13-112.67,208S197.93,464,256,464s112.67-93.13,112.67-208S314.07,48,256,48Z"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <path d="M117.33,117.33c38.24,27.15,86.38,43.34,138.67,43.34s100.43-16.19,138.67-43.34"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path
+                                    d="M394.67,394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43,16.19-138.67,43.34"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="256" y1="48" x2="256" y2="464"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <line x1="464" y1="256" x2="48" y2="256"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Pays</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/operators">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-r</title>
+                                <path d="M332.41,310.59a115,115,0,0,0-152.8,0"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M393.46,249.54a201.26,201.26,0,0,0-274.92,0"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M447.72,182.11a288,288,0,0,0-383.44,0"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M256,416a32,32,0,1,1,32-32A32,32,0,0,1,256,416Z" />
+                            </svg>
+                        </span>
+                        <span class="title">Opérateurs</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/taux">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                                <path
+                                    d="M12 11c-2 0-2-.63-2-1s.7-1 2-1 1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3 2 0 2 .68 2 1s-.62 1-2 1c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92 0-1.12-.52-3-4-3z" />
+                            </svg>
+                        </span>
+                        <span class="title">Taux</span>
+                    </a>
+                </li>
+
+                <li routerLinkActive="active">
+                    <a routerLink="/admin/tarif">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-q</title><rect x="64" y="320" width="48" height="160" rx="8" ry="8" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="288" y="224" width="48" height="256" rx="8" ry="8" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="400" y="112" width="48" height="368" rx="8" ry="8" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="176" y="32" width="48" height="448" rx="8" ry="8" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                        </span>
+                        <span class="title">Tarifs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a (click)="Logout()">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-o</title>
+                                <path
+                                    d="M304,336v40a40,40,0,0,1-40,40H104a40,40,0,0,1-40-40V136a40,40,0,0,1,40-40H256c22.09,0,48,17.91,48,40v40"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <polyline points="368 336 448 256 368 176"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <line x1="176" y1="256" x2="432" y2="256"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <span class="title">Déconnexion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

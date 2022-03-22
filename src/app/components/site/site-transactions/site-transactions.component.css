@@ -1,0 +1,99 @@
+/* Chart */
+
+.chart {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .chart {
+    width: 100%;
+    height: 280px;
+  }
+}
+/* Chart */
+
+/* Card-content */
+/* Card-content */
+
+.card-content {
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+  user-select: none;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #2e645f;
+  border-radius: 10px;
+  padding: 20px 20px;
+  background: #2e645f;
+  background: linear-gradient(to right, #2e645f -70%, #1a3633, #080b0a);
+  background: -webkit-linear-gradient(to right, #2e645f -70%, #1a3633, #080b0a);
+}
+
+.card .card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0px;
+}
+
+.card .card-logo p {
+  font-size: 18px;
+  font-family: "poppins-Regular";
+}
+
+.card .card-logo p span {
+  color: var(--orange-base);
+}
+
+.card .card-header .card-icon {
+  display: flex;
+  align-items: center;
+  line-height: 0px;
+}
+
+.card .card-header .card-icon .icon:not(:last-child) {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.card .card-header .icon:nth-child(1) {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.card .card-header span.icon:nth-child(1) svg {
+  fill: #8a9e97 !important;
+}
+
+.card .card-header span.icon:nth-child(2) svg {
+  width: 35px;
+  height: 35px;
+}
+
+.card .card-header span.icon:nth-child(2) svg circle {
+  stroke: transparent !important;
+}
+
+.card .card-body {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card .card-body .card-title h4 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card .card-body .card-title h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+/* Card-content */

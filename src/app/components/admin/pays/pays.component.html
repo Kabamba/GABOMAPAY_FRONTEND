@@ -1,0 +1,104 @@
+<div class="wrapper">
+    <app-admin-nav [addActive]="addActive"></app-admin-nav>
+  
+
+    <!-- Container Contents -->
+    <div class="container-contents">
+        <!-- Header-responisive -->
+        <!-- Header-responisive -->
+
+        <div class="header-responsive">
+            <div class="logo-responsive">
+                <h2>GabomaPay</h2>
+            </div>
+
+            <div class="toggle-responsive" id="toggle" (click)="toggle($event)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Header-responisive -->
+        <!-- Header-responisive -->
+        <div class="content-blocs respon-blocs">
+            <!-- Header -->
+            <div class="header pd-10">
+                <div class="title">
+                    <h3>Gerèr les pays</h3>
+                    <p>Bienvenue dans votre espace d'administration !</p>
+                </div>
+
+                <div class="search">
+                    <div class="group-form">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z"
+                                    style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                                <line x1="338.29" y1="338.29" x2="448" y2="448"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
+                            </svg>
+                        </span>
+                        <input type="text" [(ngModel)]="name" (ngModelChange)="search()"
+                            placeholder="Rechercher par libellé">
+                    </div>
+                </div>
+            </div>
+            <!-- Header -->
+
+            <!-- Tableau -->
+            <div class="tableau pd-10" style="margin-top:20px;">
+
+                <div class="loader-tab" [class.active]="isLoading">
+                    <div class="lds-roller">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="table">
+                    <table class="wd-800">
+                        <thead>
+                            <th (click)="sort('id')">#ID <span class="icon-sort"></span></th>
+                            <th (click)="sort('libelle')">Libelle <span class="icon-sort"></span></th>
+                            <th (click)="sort('iso')">ISO <span class="icon-sort"></span></th>
+                            <th (click)="sort('iso')">CODE <span class="icon-sort"></span></th>
+                            <th (click)="sort('devise')">Devise <span class="icon-sort"></span></th>
+                            <th>Statut</th>
+                        </thead>
+                        <tbody>
+                            <tr
+                                *ngFor="let i = index let country of countries | orderBy: key : reverse | paginate : {itemsPerPage:6,currentPage:p}">
+                                <td>{{ i + 1 }}</td>
+                                <td> <img src="../../../../assets/flags/{{country.iso}}.SVG" width="30" alt="flag"> {{ country.name }} </td>
+                                <td> {{ country.iso }} </td>
+                                <td> {{ country.phonecode }} </td>
+                                <td> {{ country.devise.libelle }} </td>
+                                <td>
+                                    <label class="check-container">
+                                        <input type="checkbox" hidden id="input-check" (change)="activer(country.id)"
+                                            [checked]="country.is_active">
+                                        <div class="check-box">
+                                            <div class="check-bubble"></div>
+                                        </div>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <pagination-controls (pageChange)=" p = $event"></pagination-controls>
+                </div>
+            </div>
+            <!-- Tableau -->
+        </div>
+    </div>
+    <!-- Container Contents -->
+</div>
