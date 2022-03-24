@@ -49,11 +49,11 @@ import { TransCompteGabonComponent } from './components/site/trans-compte-gabon/
 import { TarifComponent } from './components/admin/tarif/tarif.component';
 import { TauxComponent } from './components/admin/taux/taux.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../../../../MDN/FRONTEND/src/environments/environment.prod';
 import { OfflineComponent } from './components/globale/offline/offline.component';
 import { RechargeComponent } from './components/site/recharge/recharge.component';
 import { TransacInternationalComponent } from './components/site/transac-international/transac-international.component';
 import { RetraitComponent } from './components/site/retrait/retrait.component';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
