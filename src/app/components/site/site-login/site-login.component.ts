@@ -81,4 +81,13 @@ export class SiteLoginComponent implements OnInit {
       // fix for mobile safari to show virtual keyboard
       e.target.blur();    e.target.focus();  }
   }
+
+  showPass(){
+    const input  = document.querySelector("#password");
+    if(input.getAttribute("type") == "password"){
+      input.setAttribute("type", "text");
+    }else{
+      input.setAttribute("type", "password");
+    }
+  }
 }

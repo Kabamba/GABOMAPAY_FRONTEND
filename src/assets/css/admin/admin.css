@@ -748,6 +748,7 @@ form .title {
 .tableau .table table tbody tr td {
   padding: 15px 15px;
   text-align: left;
+  font-size:15px;
 }
 
 .tableau .table table tbody tr td a,
@@ -799,7 +800,18 @@ form .title {
 
 .tableau .table table tbody tr .td-flex{
   display:flex;
+  align-items:center;
 }
+
+.tableau .table table tbody tr td .country-flex{
+  display:flex;
+}
+
+.tableau .table table tbody tr td .country-flex .country-name{
+  margin-left:10px;
+  font-size:14px;
+}
+
 /* Tableaux */
 /* Tableaux */
 
@@ -1030,6 +1042,26 @@ hr {
 .modal .modal-wrapper .modal-text p {
   margin-bottom: 10px;
   position: relative;
+}
+
+.modal .modal-wrapper .modal-text p span{
+  display:flex;
+}
+
+.modal .modal-wrapper .modal-text .country{
+  display:flex;
+  align-items:center;
+}
+
+
+.modal .modal-wrapper .modal-text .country-flex{
+  display:flex;
+  align-items:center;
+  margin-left:10px;
+}
+
+.modal .modal-wrapper .modal-text .country-flex img{
+  margin-right:5px;
 }
 
 .modal .modal-wrapper .modal-text .confirmer {

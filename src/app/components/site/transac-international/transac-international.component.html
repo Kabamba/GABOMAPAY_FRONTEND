@@ -8,7 +8,7 @@
             <div></div>
         </div>
     </div>
-    <form [formGroup]="brandForm" style="padding:0 20px" autocomplete="off">
+    <form [formGroup]="brandForm" style="padding:0 20px" autocomplete="off" class="form-container">
         <!-- Modal -->
         <div class="simule-modal" (click)="closeModal()" [class.active]="showModal">
             <div class="simule-modal-wrapper" (click)="stop($event)">
@@ -48,9 +48,33 @@
             <div class="content-bloc">
 
                 <div class="form-card">
-                    <div class="form-text">
-                        <p>Transfert international</p>
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <div class="circle-icon">
+                                <div class="circle-icon_1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                        viewBox="0 0 512 512">
+                                        <title>ionicons-v5-b</title>
+                                        <polyline points="464 208 352 96 240 208"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <line x1="352" y1="113.13" x2="352" y2="416"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <polyline points="48 304 160 416 272 304"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <line x1="160" y1="398" x2="160" y2="96"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <h3>Transfert international</h3>
+                        </div>
                     </div>
+
+                    <!-- <div class="form-text">
+                        <p>Transfert international</p>
+                    </div> -->
 
                     <div class="form-content">
                         <input type="text" id="id" formControlName="id" hidden>
@@ -101,7 +125,8 @@
                         <div class="skel-input skel-background" [class.show]="ShowSkeleton"></div>
 
                         <div *ngIf="!ShowSkeleton && user">
-                            <div class="group-form" [class.error]="errors.country" *ngIf="user.country_id != 50 && user.country_id != 77">
+                            <div class="group-form" [class.error]="errors.country"
+                                *ngIf="user.country_id != 50 && user.country_id != 77">
                                 <div class="select">
                                     <div class="option"
                                         style="margin-top: 30px;display:flex;justify-content:space-between;"

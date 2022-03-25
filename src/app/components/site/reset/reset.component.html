@@ -1,70 +1,72 @@
-<form [formGroup]="brandForm" class="wrapper-site form-container pd-20">
-    <div class="form-card">
-        <div class="form-header">
-            <div class="form-icon">
-                <div class="circle-icon">
-                    <div class="circle-icon_1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-                            <title>ionicons-v5-g</title>
-                            <path d="M336,208V113a80,80,0,0,0-160,0v95"
-                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
-                            <rect x="96" y="208" width="320" height="272" rx="48" ry="48"
-                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
-                        </svg>
+<div class="back-image" style="background:url(../../../../assets/img/fond/ic-mob.webp) no-repeat top center;">
+    <form [formGroup]="brandForm" class="wrapper-site form-container pd-20 back-opacity">
+        <div class="form-card">
+            <div class="form-header">
+                <div class="form-icon">
+                    <div class="circle-icon">
+                        <div class="circle-icon_1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-g</title>
+                                <path d="M336,208V113a80,80,0,0,0-160,0v95"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                <rect x="96" y="208" width="320" height="272" rx="48" ry="48"
+                                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
+                <div class="form-title">
+                    <h1>Rénitialisez votre mot de passe</h1>
+                </div>
             </div>
-            <div class="form-title">
-                <h1>Rénitialisez votre mot de passe</h1>
+
+            <div class="error-box" [class.active]="invalide">
+                <p> {{ invalide }}</p>
+            </div>
+
+            <div class="form-content">
+
+                <div class="group-form" [class.error]="errors.password">
+                    <input type="password" id="password" formControlName="password" placeholder="Nouveau mot de passe">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                            <title>ionicons-v5-i</title>
+                            <path
+                                d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            <circle cx="256" cy="256" r="80"
+                                style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                        </svg>
+                    </span>
+                </div>
+                <span class="error-title" *ngIf="errors.password"> {{errors.password}} </span>
+
+                <div class="group-form" [class.error]="errors.password">
+                    <input type="password" id="password_confirmation" formControlName="password_confirmation"
+                        placeholder="confirmez nouveau mot de passe">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                            <title>ionicons-v5-i</title>
+                            <path
+                                d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            <circle cx="256" cy="256" r="80"
+                                style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="form-btn">
+                    <button type="submit" (click)="reset()" class="button" [class.button--loading]="isLoading"
+                        [disabled]="isLoading">
+                        <span class="button__text">Rénitialiser</span>
+                    </button>
+                </div>
+
+                <div class="forgot">
+                    <p>Vous possedez un compte ? <a [routerLink]="['/site/login']"> Cliquez ici</a></p>
+                </div>
             </div>
         </div>
-
-        <div class="error-box" [class.active]="invalide">
-            <p> {{ invalide }}</p>
-        </div>
-
-        <div class="form-content">
-
-            <div class="group-form" [class.error]="errors.password">
-                <input type="password" id="password" formControlName="password" placeholder="Nouveau mot de passe">
-                <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-                        <title>ionicons-v5-i</title>
-                        <path
-                            d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
-                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
-                        <circle cx="256" cy="256" r="80"
-                            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
-                    </svg>
-                </span>
-            </div>
-            <span class="error-title" *ngIf="errors.password"> {{errors.password}} </span>
-
-            <div class="group-form" [class.error]="errors.password">
-                <input type="password" id="password_confirmation" formControlName="password_confirmation"
-                    placeholder="confirmez nouveau mot de passe">
-                <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-                        <title>ionicons-v5-i</title>
-                        <path
-                            d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
-                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
-                        <circle cx="256" cy="256" r="80"
-                            style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />
-                    </svg>
-                </span>
-            </div>
-
-            <div class="form-btn">
-                <button type="submit" (click)="reset()" class="button" [class.button--loading]="isLoading"
-                    [disabled]="isLoading">
-                    <span class="button__text">Rénitialiser</span>
-                </button>
-            </div>
-
-            <div class="forgot">
-                <p>Vous possedez un compte ? <a [routerLink]="['/site/login']"> Cliquez ici</a></p>
-            </div>
-        </div>
-    </div>
-</form>
+    </form>
+</div>

@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
 
   isLoading = false;
   ShowSkeleton = false;
+  showImg = true;
 
   invalide: any;
   errors = {
@@ -29,20 +30,13 @@ export class RegisterComponent implements OnInit {
 
   countries: any[] = [];
 
+
   constructor(
     private auth: SiteAuthService,
     private countri: CountryService,
     private router: Router,
     private toastr: ToastrService
-  ) {}
-
-  ngAfterViewInit() {
-    document.querySelector('body').classList.add('site');
-  }
-
-  ngOnDestroy() {
-    document.querySelector('body').classList.remove('site');
-  }
+  ) { }
 
   resetForm() {
     this.brandForm = new FormGroup({
@@ -101,8 +95,22 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  SetValue(id){
+  SetValue(id) {
     this.brandForm.value.country = id;
+    const selctImg: any = document.querySelector('.sl-inp-txt img');
+    const selctP: any = document.querySelector('.sl-inp-txt p');
+
+
+    this.countries.forEach(country => {
+      if (country.id == id) {
+        selctImg.setAttribute('src', `../../../../assets/flags/${country.iso}.SVG`)
+        selctP.textContent = country.name;
+        this.showImg = false;
+      }
+    });
+    
+    const selectDropDown = document.querySelector('.select-dropdown');
+    selectDropDown.classList.remove('active');
   }
 
   removeAutocomplete(e) {
@@ -113,4 +121,49 @@ export class RegisterComponent implements OnInit {
       e.target.focus();
     }
   }
+
+  showSelect(event: Event) {
+    const selectDropDown = document.querySelector('.select-dropdown');
+    const icon = document.querySelector('.select-input .icon');
+    icon.classList.toggle('active');
+    selectDropDown.classList.toggle('active');
+    event.stopPropagation();
+  }
+
+  // hiddenImg() {
+  //   const selctImg: any = document.querySelector('.sl-inp-txt img');
+  //   if (selctImg.src == "http://localhost:4200/") {
+  //     selctImg.style.display = "none";
+  //   } else {
+  //     selctImg.style.display = "block";
+  //   }
+  // }
+
+  showPass() {
+    const input = document.querySelector("#password");
+    const inputConfirm = document.querySelector("#password_confirmation");
+
+    if (input.getAttribute("type") == "password" && inputConfirm.getAttribute("type") == "password") {
+      input.setAttribute("type", "text");
+      inputConfirm.setAttribute("type", "text");
+    } else {
+      input.setAttribute("type", "password");
+      inputConfirm.setAttribute("type", "password");
+    }
+  }
+
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
+
+  ngAfterViewInit() {
+    document.querySelector('html').addEventListener('click', function (e) {
+      const selectDropDown = document.querySelector('.select-dropdown');
+      const icon = document.querySelector('.select-input .icon');
+      selectDropDown.classList.remove('active');
+      icon.classList.remove('active');
+
+    })
+  }
+
 }

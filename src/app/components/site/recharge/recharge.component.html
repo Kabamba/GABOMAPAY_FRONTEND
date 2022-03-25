@@ -8,7 +8,7 @@
             <div></div>
         </div>
     </div>
-    <form [formGroup]="brandForm" style="padding:0 20px" autocomplete="off">
+    <form [formGroup]="brandForm" style="padding:0 20px" autocomplete="off" class="form-container">
         <!-- Modal -->
         <div class="simule-modal" (click)="closeModal()" [class.active]="showModal">
             <div class="simule-modal-wrapper" (click)="stop($event)">
@@ -34,7 +34,8 @@
                 </div>
 
                 <div class="box-btn">
-                    <button (click)="envoyer()" class="button" [class.button--loading]="isConfirming" [disabled]="isConfirming">
+                    <button (click)="envoyer()" class="button" [class.button--loading]="isConfirming"
+                        [disabled]="isConfirming">
                         <span class="button__text">Confirmer</span>
                     </button>
                     <button id="close-modal" (click)="closeModal()">Annuler</button>
@@ -47,9 +48,31 @@
             <div class="content-bloc">
 
                 <div class="form-card">
-                    <div class="form-text">
-                        <p>Rechargez votre compte</p>
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <div class="circle-icon">
+                                <div class="circle-icon_1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M434.67,285.59v-29.8C434.67,157.06,354.43,77,255.47,77a179,179,0,0,0-140.14,67.36m-38.53,82v29.8C76.8,355,157,435,256,435a180.45,180.45,0,0,0,140-66.92"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <polyline points="32 256 76 212 122 256"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <polyline points="480 256 436 300 390 256"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <h3>Rechargez votre compte</h3>
+                        </div>
                     </div>
+
+                    <!-- <div class="form-text">
+                        <p>Rechargez votre compte</p>
+                    </div> -->
 
                     <div class="form-content">
                         <input type="text" id="id" formControlName="id" hidden>

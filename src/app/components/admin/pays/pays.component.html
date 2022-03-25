@@ -76,7 +76,16 @@
                             <tr
                                 *ngFor="let i = index let country of countries | orderBy: key : reverse | paginate : {itemsPerPage:6,currentPage:p}">
                                 <td>{{ i + 1 }}</td>
-                                <td> <img src="../../../../assets/flags/{{country.iso}}.SVG" width="30" alt="flag"> {{ country.name }} </td>
+                                <td>
+                                    <div class="country-flex">
+                                        <div class="country-img">
+                                            <img src="../../../../assets/flags/{{country.iso}}.SVG" width="30" alt="flag"> 
+                                        </div>
+                                        <div class="country-name">
+                                            {{ country.name }}
+                                        </div>
+                                    </div>
+                                </td>
                                 <td> {{ country.iso }} </td>
                                 <td> {{ country.phonecode }} </td>
                                 <td> {{ country.devise.libelle }} </td>

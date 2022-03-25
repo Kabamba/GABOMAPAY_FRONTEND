@@ -193,7 +193,13 @@
                     <p><strong>Noms : </strong>{{details.user.prenom}} {{details.user.name}}</p>
                     <p><strong>Email : </strong>{{details.user.email}}</p>
                     <p><strong>Téléphone : </strong>{{details.user.phone}}</p>
-                    <p><strong>Pays : </strong><img src="../../../../assets/flags/{{details.country.iso3}}.SVG" width="30" alt="flag">{{details.country.name}}</p>
+                    <p class="country">
+                        <strong>Pays : </strong>
+                        <span class="country-flex">
+                            <img src="../../../../assets/flags/{{details.country.iso3}}.SVG" width="30" alt="flag">
+                            {{details.country.name}}
+                        </span>
+                    </p>
                     <hr>
                     <p *ngIf="details.status == 0"><strong>Statut : </strong><span class="statut cours">En cours</span>
                     </p>
@@ -378,7 +384,17 @@
                                 <td *ngIf="transaction.status == 2"><span class="badge danger">Echec</span></td>
 
                                 <td> {{ transaction.date_time_trans }} </td>
-                                <td><img src="../../../../assets/flags/{{transaction.country.iso3}}.SVG" width="30" alt="flag"> {{ transaction.country.name }} </td>
+                                <td>
+                                    <div class="country-flex">
+                                        <div class="country-img">
+                                            <img src="../../../../assets/flags/{{transaction.country.iso3}}.SVG"
+                                                width="30" alt="flag">
+                                        </div>
+                                        <div class="country-name">
+                                            {{ transaction.country.name }}
+                                        </div>
+                                    </div>
+                                </td>
                                 <td class="td-flex">
                                     <button id="open-modal" [title]="'Détail'" (click)="show(transaction.id)"><span
                                             class="icon-eye"></span></button>

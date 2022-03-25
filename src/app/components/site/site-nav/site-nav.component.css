@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: var(--black-base);
+    background-color:var(--black-base);
     color:var(--white);
     line-height: 0px;
   }

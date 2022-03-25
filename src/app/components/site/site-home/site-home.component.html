@@ -227,28 +227,119 @@
 
                 <div class="transac-content">
                     <a [routerLink]="['/site/transactions/detail/',transaction.id]"
-                        *ngFor="let i = index let transaction of transactions"
-                        class="transac-box no-select">
+                        *ngFor="let i = index let transaction of transactions" class="transac-box no-select">
                         <div class="transac-id-right">
-                            <div class="transac-id">
+                            <!-- <div class="transac-id">
                                 <span>{{9 >= i ? '0' : ''}}{{i+1}}</span>
+                            </div> -->
+                            <div class="transac-status statu-success">
+                                <div class="status-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                        viewBox="0 0 512 512">
+                                        <polyline points="416 128 192 384 96 288"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="transac-text">
-                                <span class="date">{{transaction.date_time_trans}}</span>
-                                <p>{{transaction.type_trans_name}} 
-                                    <span *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.user.id == user.id">sortant</span>
-                                    <span *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.second_id == user.id">reçu</span>
-                                </p>
+                                <!-- <p>{{transaction.type_trans_name}}
+                                    <span
+                                        *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.user.id == user.id">sortant</span>
+                                    <span
+                                        *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.second_id == user.id">reçu</span>
+                                </p> -->
+                                <p>Crédit</p>
+                                <!-- <span class="date">{{transaction.date_time_trans}}</span> -->
+                                <span class="date">13:56</span>
                             </div>
                         </div>
 
-                        <div class="transac-mont">
+                        <div class="transac-mont statu-success">
                             <p>
                                 <span>{{transaction.montant}}</span>
                                 <span>{{user.country_id == '77' ? ' FCFA' : ' USD'}}</span>
                             </p>
                         </div>
                     </a>
+
+                    <a [routerLink]="['/site/transactions/detail/',transaction.id]"
+                        *ngFor="let i = index let transaction of transactions" class="transac-box no-select">
+                        <div class="transac-id-right">
+                            <!-- <div class="transac-id">
+                            <span>{{9 >= i ? '0' : ''}}{{i+1}}</span>
+                        </div> -->
+                            <div class="transac-status statu-danger">
+                                <div class="status-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="transac-text">
+                                <!-- <p>{{transaction.type_trans_name}}
+                                <span
+                                    *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.user.id == user.id">sortant</span>
+                                <span
+                                    *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.second_id == user.id">reçu</span>
+                            </p> -->
+                                <p>Crédit</p>
+                                <!-- <span class="date">{{transaction.date_time_trans}}</span> -->
+                                <span class="date">13:56</span>
+                            </div>
+                        </div>
+
+                        <div class="transac-mont statu-danger">
+                            <p>
+                                <span>{{transaction.montant}}</span>
+                                <span>{{user.country_id == '77' ? ' FCFA' : ' USD'}}</span>
+                            </p>
+                        </div>
+                    </a>
+
+
+                    <a [routerLink]="['/site/transactions/detail/',transaction.id]"
+                        *ngFor="let i = index let transaction of transactions" class="transac-box no-select">
+                        <div class="transac-id-right">
+                            <!-- <div class="transac-id">
+                        <span>{{9 >= i ? '0' : ''}}{{i+1}}</span>
+                    </div> -->
+                            <div class="transac-status statu-running">
+                                <div class="status-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M434.67,285.59v-29.8C434.67,157.06,354.43,77,255.47,77a179,179,0,0,0-140.14,67.36m-38.53,82v29.8C76.8,355,157,435,256,435a180.45,180.45,0,0,0,140-66.92"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <polyline points="32 256 76 212 122 256"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                        <polyline points="480 256 436 300 390 256"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="transac-text">
+                                <!-- <p>{{transaction.type_trans_name}}
+                            <span
+                                *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.user.id == user.id">sortant</span>
+                            <span
+                                *ngIf="transaction.type_trans == 3 || transaction.type_trans == 5 && transaction.second_id == user.id">reçu</span>
+                        </p> -->
+                                <p>Crédit</p>
+                                <!-- <span class="date">{{transaction.date_time_trans}}</span> -->
+                                <span class="date">13:56</span>
+                            </div>
+                        </div>
+
+                        <div class="transac-mont statu-running">
+                            <p>
+                                <span>{{transaction.montant}}</span>
+                                <span>{{user.country_id == '77' ? ' FCFA' : ' USD'}}</span>
+                            </p>
+                        </div>
+                    </a>
+
 
                     <div class="skel-transac" [class.show]="showSkeleton">
                         <div class="skel-box">
@@ -343,16 +434,12 @@
                 <div *ngIf="infos.country_id == 50 || infos.country_id == 77">
                     <a *ngIf="!showSkeleton" routerLink="/site/retrait" class="no-select">
                         <span class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.8396 20.1642V6.54645" stroke="#200E32" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M20.9172 16.0681L16.8394 20.1648L12.7617 16.0681" stroke="#200E32"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M6.91109 3.83289V17.4507" stroke="#200E32" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2.83344 7.929L6.91121 3.83234L10.989 7.929" stroke="#200E32"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" class="wallet">
+                                <rect x="48" y="144" width="416" height="288" rx="48" ry="48"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M411.36,144V114A50,50,0,0,0,352,64.9L88.64,109.85A50,50,0,0,0,48,159v49"
+                                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />
+                                <path d="M368,320a32,32,0,1,1,32-32A32,32,0,0,1,368,320Z" />
                             </svg>
                         </span>
                         <span class="title">Retrait</span>
@@ -362,22 +449,22 @@
 
                 <a [routerLink]="['/site/recharge']" class="no-select" *ngIf="!showSkeleton">
                     <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.8396 20.1642V6.54645" stroke="#200E32" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M20.9172 16.0681L16.8394 20.1648L12.7617 16.0681" stroke="#200E32"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M6.91109 3.83289V17.4507" stroke="#200E32" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M2.83344 7.929L6.91121 3.83234L10.989 7.929" stroke="#200E32" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                            <title>ionicons-v5-b</title>
+                            <path
+                                d="M434.67,285.59v-29.8C434.67,157.06,354.43,77,255.47,77a179,179,0,0,0-140.14,67.36m-38.53,82v29.8C76.8,355,157,435,256,435a180.45,180.45,0,0,0,140-66.92"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            <polyline points="32 256 76 212 122 256"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                            <polyline points="480 256 436 300 390 256"
+                                style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
                         </svg>
                     </span>
                     <span class="title">Recharge</span>
                 </a>
                 <div class="skel-square skel-background" [class.show]="showSkeleton"></div>
 
-                <div  *ngIf="infos.country_id != 50 && infos.country_id != 77">
+                <div *ngIf="infos.country_id != 50 && infos.country_id != 77">
                     <a [routerLink]="['/site/transfert/international']" class="no-select" *ngIf="!showSkeleton">
                         <span class="icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"

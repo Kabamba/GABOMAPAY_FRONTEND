@@ -42,6 +42,7 @@
 
 .header-bottom .nav-bottom .plus .icon svg path,
 .header-bottom .nav-bottom .plus .icon svg line,
+.header-bottom .nav-bottom .plus .icon svg rect,
 .header-bottom .nav-bottom .plus .icon svg {
   stroke: var(--black-base) !important;
 }
@@ -69,6 +70,7 @@
 .header-bottom .nav-bottom .link-bloc a .icon svg circle,
 .header-bottom .nav-bottom .link-bloc a .icon svg polygon,
 .header-bottom .nav-bottom .link-bloc a .icon svg polyline,
+.header-bottom .nav-bottom .link-bloc a .icon svg rect,
 .header-bottom .nav-bottom .link-bloc a .icon svg line {
   stroke: var(--grey-light) !important;
   fill: transparent !important;

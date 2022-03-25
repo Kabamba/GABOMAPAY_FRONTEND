@@ -38,7 +38,7 @@ import { TransCompteRdcComponent } from './components/site/trans-compte-rdc/tran
 import { TransCompteGabonComponent } from './components/site/trans-compte-gabon/trans-compte-gabon.component';
 import { TauxComponent } from './components/admin/taux/taux.component';
 import { TarifComponent } from './components/admin/tarif/tarif.component';
-import { OfflineComponent } from './components/globale/offline/offline.component';
+// import { OfflineComponent } from './components/globale/offline/offline.component';
 import { RechargeComponent } from './components/site/recharge/recharge.component';
 import { TransacInternationalComponent } from './components/site/transac-international/transac-international.component';
 import { RetraitComponent } from './components/site/retrait/retrait.component';
@@ -195,10 +195,10 @@ const routes: Routes = [
     canActivate: [AuthGuard, IsAdminGuard],
     component: TarifComponent,
   },
-  {
-    path: 'connect/offline',
-    component: OfflineComponent,
-  },
+  // {
+  //   path: 'connect/offline',
+  //   component: OfflineComponent,
+  // },
   { path: '**', component: SiteLoginComponent },
 ];
 
